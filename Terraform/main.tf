@@ -1,12 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.49.0"
-    }
-  }
-}
-
 provider "aws" {
   region  = "us-east-1"
  // profile = "default"
@@ -17,7 +8,7 @@ resource "aws_vpc" "sanjay-lab" {
  cidr_block = "10.0.0.0/16"
 }
 
-resource "aws_subnet" "app_subnet {
+resource "aws_subnet" "app_subnet" {
  vpc_id = aws_vpc.sanjay-lab.id
  cidr_block = "10.0.1.0/24"
  availability_zone = "us-east-1a"
