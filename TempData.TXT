@@ -1,0 +1,5 @@
+ami-0fe630eb857a6ec83
+
+AccessKey: ASIA2AD6MCSSTBZM3YVO
+SecretKey: K0b9IB9PN249PDE/IZg1zVGu3jzLO2JZnt78+2RO
+SecurityToken: FwoGZXIvYXdzEKP//////////wEaDLWsKKNvL84b0npiViK4ATm1jXa4ZpUtMqQz/fdInwLkieQ643qVJK2BJdFniaGJkFM02sYwWuUUsMM+ghsn+xTvwuZYthC8fnbr00K+8gC0mCaSjlmyNb0njfJEJ39nG63XaLVlMEscC7j7/qLqgpBVo3mUbJJCutIcTa5pX6swqExedy1jnmSOJTPuuUmPkU/Dk3h5mHVGONmzwjHy8vi5sx/s+/rFzyhqal1LIziidzuX/NEShiCoL52k61DnNB9Tbae3kzoon8bdsgYyLccojOP6b54M/QVM/p72wj7L8I8xXGieUTDr2MvxpvBGk4ksy/DYeYnQc3Y8Eg==
