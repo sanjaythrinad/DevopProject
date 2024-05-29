@@ -30,7 +30,7 @@ resource "aws_subnet" "db_subnet" {
 }
 
 resource "aws_instance" "lab-web-srv1" {
-  ami           = "ami-04b70fa74e45c3917"
+  ami           = var.instance_ami
   instance_type = "t2.micro"
   subnet_id = aws_subnet.app_subnet.id
 
@@ -43,7 +43,7 @@ resource "aws_instance" "lab-web-srv1" {
 }
 
 resource "aws_instance" "lab-db-srv1" {
-  ami           = "ami-04b70fa74e45c3917"
+  ami           = var.instance_ami
   instance_type = "t2.micro"
   subnet_id = aws_subnet.db_subnet.id
 
