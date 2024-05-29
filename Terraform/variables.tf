@@ -4,13 +4,13 @@ variable "vpc_cidr_block" {
   default     = "10.0.0.0/16"
 }
 
-variable "subnet_1_cidr_block" {
+variable "app_subnet_cidr_block" {
   description = "CIDR block for the first subnet"
   type        = string
   default     = "10.0.1.0/24"
 }
 
-variable "subnet_2_cidr_block" {
+variable "db_subnet_cidr_block" {
   description = "CIDR block for the second subnet"
   type        = string
   default     = "10.0.2.0/24"
@@ -43,11 +43,11 @@ variable "instance_type" {
 variable "server_1_name" {
   description = "Name tag for the first DevOps server"
   type        = string
-  default     = "devopsserver1"
+  default     = "lab-web-srv1"
 }
 
 variable "server_2_name" {
   description = "Name tag for the second DevOps server"
   type        = string
-  default     = "devopsserver2"
+  default     = "lab-db-srv1"
 }

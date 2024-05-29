@@ -3,7 +3,6 @@ provider "aws" {
  // profile = "default"
 }
 
-
 resource "aws_vpc" "sanjay-lab" {
  cidr_block = "10.0.0.0/16"
 }
