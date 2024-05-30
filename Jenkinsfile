@@ -47,7 +47,7 @@ pipeline {
             steps {
                 sh '''
                     cd Terraform
-                    terraform destroy -no-color
+                    terraform apply "tfplan" -destroy -no-color
                 '''
             }
         }
