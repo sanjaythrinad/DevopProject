@@ -35,5 +35,21 @@ pipeline {
                 '''
             }
         }
+
+        stage('Approve') {
+            steps {
+                // Wait for manual approval
+                input message: 'Do you want to destroy the changes?', ok: 'Destroy'
+            }
+        }
+
+        stage('Terraform Destroy') {
+            steps {
+                sh '''
+                    cd Terraform
+                    terraform destroy "tfplan" -no-color
+                '''
+            }
+        }
     }
 }
