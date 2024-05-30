@@ -12,22 +12,28 @@ pipeline {
 
     stages {
         stage('Initialize Terraform') {
-            sh '''
-                cd Terraform
-                terraform init
-            '''
+            steps {
+                sh '''
+                    cd Terraform
+                    terraform init
+                '''
+            }
         }
         stage('Plan the Terraform run') {
-            sh '''
-                cd Terraform
-                terraform plan
-            '''
+            steps {
+                sh '''
+                    cd Terraform
+                    terraform plan
+                '''
+            }
         }
         stage('Apply the Terraform plan') {
-            sh '''
-                cd Terraform
-                terraform apply
-            '''
+            steps {
+                sh '''
+                    cd Terraform
+                    terraform apply
+                '''
+            }
         }
     }
 }
