@@ -1,0 +1,6 @@
+---
+- name: "Install Docker on New Instance"
+  hosts: Project1
+  become: yes
+  vars:
+    ansible_ssh_common_args = 
