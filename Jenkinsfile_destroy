@@ -11,6 +11,15 @@ pipeline {
     }
 
     stages {
+        stage('Initilize Terraform') {
+            steps {
+                sh '''
+                    cd Terraform
+                    terraform init -no-color 
+                '''
+                }
+        }
+
         stage('Approve') {
             steps {
                 // Wait for manual approval
