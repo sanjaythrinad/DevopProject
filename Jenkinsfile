@@ -8,6 +8,7 @@ pipeline {
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
         AWS_SESSION_TOKEN = credentials('AWS_SESSION_TOKEN')
+        AWS_SSH_KEY = credentials('AWS_SSH_KEY')
     }
 
     stages {
@@ -50,6 +51,15 @@ pipeline {
                     cd Terraform
                     terraform apply "tfplan" -no-color
                 '''
+            }
+        }
+
+        stage('Update Ansible Inventory') {
+            steps {
+                script {
+                    def publicIp = sh(script: "terraform output instance_public_ip", returnStdout: true).trim()
+                    writeFile(file: ANSIBLE_INVENTORY_FILE, text: "[Project1]\n${publicIp}")
+                }
             }
         }
         
