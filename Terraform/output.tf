@@ -18,7 +18,7 @@ output "devops_server_1_private_ip" {
   value       = aws_instance.lab-web-srv1.private_ip
 }
 
-output "devops_server_1_private_ip" {
+output "devops_server_1_public_ip" {
   description = "The private IP of the first DevOps server"
   value       = aws_instance.lab-web-srv1.public_ip
 }
