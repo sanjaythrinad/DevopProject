@@ -23,6 +23,7 @@ resource "aws_instance" "lab-web-srv1" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.app_subnet.id
   key_name = "AWS_SSH_KEY"
+  associate_pibic_ip_address = true
   tags = {
     Name = "lab-web-srv1",
     Environment = "Lab",
