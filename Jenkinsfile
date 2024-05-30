@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''
                     cd Terraform
-                    terraform init
+                    terraform init -no-color
                 '''
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     cd Terraform
-                    terraform plan
+                    terraform plan -no-color
                 '''
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh '''
                     cd Terraform
-                    terraform apply
+                    terraform apply -no-color
                 '''
             }
         }
