@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     cd Terraform
-                    terraform plan -no-color
+                    terraform plan -out=tfplan -no-color
                 '''
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 sh '''
                     cd Terraform
-                    terraform apply -no-color
+                    terraform apply "tfplan" -no-color
                 '''
             }
         }
