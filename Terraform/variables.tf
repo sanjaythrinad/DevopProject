@@ -43,11 +43,11 @@ variable "instance_type" {
 variable "server_1_name" {
   description = "Name tag for the first DevOps server"
   type        = string
-  default     = "lab-web-srv1"
+  default     = "appserver"
 }
 
 variable "server_2_name" {
   description = "Name tag for the second DevOps server"
   type        = string
-  default     = "lab-db-srv1"
+  default     = "dbserver"
 }
