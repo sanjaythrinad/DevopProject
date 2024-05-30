@@ -3,4 +3,31 @@
   hosts: Project1
   become: yes
   vars:
-    ansible_ssh_common_args = 
+    ansible_ssh_common_args: "-o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+    tasks:
+      - name: Install Yum utils
+        yum: 
+          name: yum-utils
+          state: present
+      - name: Add docker repo
+        get_url:
+          url: https://download.docker.com/linux/rhel/docker-ce.repo
+          dest: /etc/yum.repos.d/docker-ce.repo
+          mode: 644
+          owner: root
+          group: root
+      - name: Install Docker package
+        yum:
+          name: 
+            - docker-ce 
+            - docker-ce-cli 
+            - containerd.io 
+            - docker-buildx-plugin 
+            - docker-compose-plugin
+          state: present
+      - name: Start and enable Docker service
+        service:
+          name: docker
+          state: started
+          enabled: yes
+        
