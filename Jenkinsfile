@@ -14,9 +14,9 @@ pipeline {
 
     stages {
         stage('Initialize Terraform') {
-            when {
-                expression { params.init == 'yes' }
-            }
+            //when {
+            //    expression { params.init == 'yes' }
+            //}
             steps {
                 sh '''
                     cd Terraform
@@ -25,9 +25,9 @@ pipeline {
             }
         }
         stage('Plan the Terraform run') {
-            when {
-                expression { params.action == 'plan' }
-            }
+            //when {
+            //    expression { params.action == 'plan' }
+            //}
             steps {
                 sh '''
                     cd Terraform
@@ -37,9 +37,9 @@ pipeline {
         }
 
         stage('Approve') {
-            when {
-                expression { params.action == 'apply' }
-            }
+            //when {
+            //    expression { params.action == 'apply' }
+            //}
             steps {
                 // Wait for manual approval
                 input message: 'Do you want to Build the Instance?', ok: 'Approve'
