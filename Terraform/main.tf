@@ -31,8 +31,8 @@ resource "aws_instance" "lab-web-srv1" {
   }
 }
 
-provisioner "local-exec" {
-  command = <<EOT 
-  echo "[Project1]" > Ansible/inventory.ini
-  echo "${aws_instance.lab-web-srv1.public_ip}  ansible_user=ec2-user" >> Ansible/inventory.ini
-}
+//provisioner "local-exec" {
+//  command = <<EOT 
+//  echo "[Project1]" > Ansible/inventory.ini
+//  echo "${aws_instance.lab-web-srv1.public_ip}  ansible_user=ec2-user" >> Ansible/inventory.ini
+//}
