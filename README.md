@@ -2,7 +2,7 @@
 
 This project is using Devop Technologies to build a Web Application on AWS in fully Automation method. 
 
-#Technologies Used:
+<b>Technologies Used:</b>
 
 1. Jenkins
 2. AWS
